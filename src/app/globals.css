@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-blue: #3b82f6;
+  --color-brand-emerald: #10b981;
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-card: #18181b;
+  --color-border: #27272a;
+  --color-muted: #a1a1aa;
+  --color-accent: #27272a;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --popover: #09090b;
+  --popover-foreground: #fafafa;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #3b82f6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .glass {
+    @apply bg-card/60 backdrop-blur-md border border-white/10;
+  }
+
+  .bento-card {
+    @apply relative overflow-hidden rounded-3xl border border-border bg-card/50 p-8 transition-all duration-300 hover:bg-card/80 hover:border-brand-blue/30;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-brand-blue px-8 py-4 font-bold text-white transition-all hover:scale-105 active:scale-95 shadow-lg shadow-brand-blue/20;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-border bg-card/50 px-8 py-4 font-bold text-white transition-all hover:bg-white/5 active:scale-95;
+  }
 }

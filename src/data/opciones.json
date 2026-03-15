@@ -1,0 +1,71 @@
+{
+  "paquetesBase": [
+    {
+      "id": "landing",
+      "titulo": "Landing Page",
+      "paginas": 1,
+      "precio": 1000,
+      "items": ["Página estática", "Form contacto"],
+      "interacciones": 3
+    },
+    {
+      "id": "home-1",
+      "titulo": "Home + 1 sección",
+      "paginas": 2,
+      "precio": 1500,
+      "items": ["Páginas estáticas", "Form contacto", "Menú superior"],
+      "interacciones": 3
+    },
+    {
+      "id": "home-2",
+      "titulo": "Home + 2 secciones",
+      "paginas": 3,
+      "precio": 2000,
+      "items": ["Páginas estáticas", "Form contacto", "Menú superior"],
+      "interacciones": 4
+    },
+    {
+      "id": "home-3",
+      "titulo": "Home + 3 secciones",
+      "paginas": 4,
+      "precio": 2500,
+      "items": ["Páginas estáticas", "Form contacto", "Menú superior"],
+      "interacciones": 4
+    }
+  ],
+  "adicionales": [
+    {
+      "id": "bot-ai",
+      "titulo": "Bot Personalizado",
+      "descripcion": "IA entrenada con tu data",
+      "precio": 800,
+      "popular": true
+    },
+    {
+      "id": "cms",
+      "titulo": "CMS (Gestor de Contenidos)",
+      "descripcion": "Panel autoadministrable",
+      "precio": 1000
+    },
+    {
+      "id": "micro-anim",
+      "titulo": "2 Microanimaciones",
+      "descripcion": "Mejora la UX",
+      "precio": 500
+    },
+    {
+      "id": "home-anim",
+      "titulo": "Animación Home",
+      "descripcion": "Animación de alto impacto",
+      "precio": 1000
+    },
+    {
+      "id": "hosting",
+      "titulo": "Hosting + Soporte",
+      "descripcion": "Mantenimiento anual premium",
+      "precio": 300,
+      "recurrente": true,
+      "periodo": "/año"
+    }
+  ]
+}
