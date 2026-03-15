@@ -17,11 +17,10 @@ export default function Navbar() {
     >
       <div className="glass rounded-full px-6 py-3 flex items-center gap-8 max-w-4xl shadow-2xl">
         <div 
-          className="flex items-center gap-2 cursor-pointer" 
+          className="flex items-center cursor-pointer" 
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <img src="/logo.png" alt="88mphlabs" className="w-8 h-8 rounded-full object-cover" />
-          <span className="text-xl font-bold tracking-tight">88mphlabs</span>
+          <img src="/logo.png" alt="88mphlabs" className="h-8 object-contain" />
         </div>
 
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted">

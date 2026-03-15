@@ -17,9 +17,8 @@ export default function Home() {
       
       <footer className="py-12 border-t border-gray-100 dark:border-gray-900 bg-white dark:bg-gray-950">
         <div className="container px-6 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="88mphlabs" className="w-10 h-10 rounded-lg object-cover" />
-            <span className="text-xl font-bold text-gray-900 dark:text-white">88mphlabs</span>
+          <div className="flex items-center">
+            <img src="/logo.png" alt="88mphlabs" className="h-10 object-contain" />
           </div>
           <p className="text-gray-500 text-sm">© 2026 88mphlabs. Todos los derechos reservados. Future-Ready Web.</p>
           <div className="flex gap-6">
