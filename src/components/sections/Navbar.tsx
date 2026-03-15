@@ -27,9 +27,6 @@ export default function Navbar() {
           <button onClick={() => scrollTo("como-funciona")} className="hover:text-foreground transition-colors">
             Cómo Funciona
           </button>
-          <button className="hover:text-foreground transition-colors">
-            Catálogo
-          </button>
           <button onClick={() => scrollTo("faq")} className="hover:text-foreground transition-colors">
             FAQ
           </button>
