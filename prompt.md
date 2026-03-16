@@ -22,7 +22,7 @@ SECCIÓN 3: ESTRUCTURA DE LA PÁGINA (Single Page)
 * Links: [Cómo Funciona], [Catálogo], [FAQ]
 * CTA: Botón [Empezar Configuración] (Mismo comportamiento que el Hero CTA).
 1. Hero Section (El Gancho)
-* Título Principal (H1): "Tu Sitio Web Profesional en Tiempo Récord, con Precios 100% Transparentes."
+* Título Principal (H1): "Tu Sitio Web Profesional en Tiempo Récord, con Precios 100% Transparentes. "
 * Subtítulo: "Sin presupuestos ocultos ni demoras infinitas. Elegí tu base, sumá tus opcionales y lanzá."
 * CTA: Botón [Empezar Configuración] que scrollea suavemente a la Sección 2.
 * Interacción: Incluir microanimación en el CTA al hacer hover.

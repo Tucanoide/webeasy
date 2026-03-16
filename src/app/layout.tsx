@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "88mphlabs | Future-Ready Web Development",
+  title: "88mph Labs | Future-Ready Web Development",
   description: "Your professional website in record time with 100% transparent pricing. Choose your base, add your power-ups, and launch.",
 };
 

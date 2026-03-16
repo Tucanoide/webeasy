@@ -60,7 +60,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">¡Solicitud Enviada!</h3>
                 <p className="text-muted text-lg mb-8">
-                  Recibimos tu configuración. Un experto de 88mphlabs revisará los detalles y te contactará en menos de 24 horas.
+                  Recibimos tu configuración. Un experto de 88mph Labs revisará los detalles y te contactará en menos de 24 horas.
                 </p>
                 <button 
                   onClick={onClose}

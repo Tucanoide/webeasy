@@ -55,7 +55,7 @@ export default function Hero() {
         >
           Tu Sitio Web Profesional <br />
           en Tiempo Récord, con <br />
-          Precios <span className="text-brand-blue">100% Transparentes</span>.
+          Precios <span className="text-brand-blue">100% Transparentes.</span>
         </motion.h1>
 
         <motion.p
