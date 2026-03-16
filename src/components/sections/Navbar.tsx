@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap } from "lucide-react";
 
 export default function Navbar() {
   const scrollTo = (id: string) => {

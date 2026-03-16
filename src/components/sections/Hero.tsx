@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Image from "next/image";
 
 export default function Hero() {
   const scrollToConfigurator = () => {

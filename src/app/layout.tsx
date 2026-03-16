@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth dark">
-      <body className={`${inter.variable} font-sans antialiased selection:bg-blue-100 selection:text-blue-900`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} font-sans antialiased selection:bg-blue-100 selection:text-blue-900 dark`}>
         <ConfiguratorProvider>
           {children}
         </ConfiguratorProvider>
