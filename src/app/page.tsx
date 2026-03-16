@@ -15,17 +15,12 @@ export default function Home() {
       <Configurator />
       <FAQ />
       
-      <footer className="py-12 border-t border-gray-100 dark:border-gray-900 bg-white dark:bg-gray-950">
+      <footer className="py-12 border-t border-gray-900 bg-black">
         <div className="container px-6 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="88mph Labs" className="h-10 object-contain" />
+          <div className="flex items-center">
             <span className="text-xl font-bold text-gray-900 dark:text-white">88mph Labs</span>
           </div>
           <p className="text-gray-500 text-sm">© 2026 88mphlabs. Todos los derechos reservados. Future-Ready Web.</p>
-          <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors">Twitter</a>
-            <a href="#" className="text-gray-400 hover:text-blue-600 transition-colors">LinkedIn</a>
-          </div>
         </div>
       </footer>
     </main>

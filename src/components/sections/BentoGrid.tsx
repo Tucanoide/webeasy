@@ -29,7 +29,7 @@ const features = [
     bg: "bg-amber-400/10"
   },
   {
-    title: "Arquitectura Scalable",
+    title: "Arquitectura Escalable",
     description: "Código limpio, modular y preparado para crecer junto con tu negocio, usando las últimas tecnologías del mercado.",
     icon: Cpu,
     className: "md:col-span-2",
