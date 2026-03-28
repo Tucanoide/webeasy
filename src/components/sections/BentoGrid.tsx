@@ -13,24 +13,24 @@ const features = [
     bg: "bg-brand-blue/10"
   },
   {
-    title: "Transparencia Radical",
-    description: "Sin presupuestos ocultos. Precios fijos y claros desde el primer segundo.",
+    title: "Diseños de alta calidad",
+    description: "Templates visuales únicos que elevan la identidad de tu marca, capturan la atención del usuario y te posicionan diferencialmente frente a la competencia.",
     icon: Shield,
     className: "md:col-span-1",
     color: "text-brand-emerald",
     bg: "bg-brand-emerald/10"
   },
   {
-    title: "Lanzamiento Express",
-    description: "Procesos estandarizados que nos permiten entregar tu sitio web funcional en tiempo récord.",
+    title: "Lanzamiento en Tiempo Récord",
+    description: "Procesos optimizados y estandarizados que aseguran la entrega rápida de tu sitio web, manteniendo la máxima calidad.",
     icon: Target,
     className: "md:col-span-1",
     color: "text-amber-400",
     bg: "bg-amber-400/10"
   },
   {
-    title: "Arquitectura Escalable",
-    description: "Código limpio, modular y preparado para crecer junto con tu negocio, usando las últimas tecnologías del mercado.",
+    title: "Funcionalidades Escalables",
+    description: "Implementa solo las funcionalidades que tu negocio necesita, optimizando costos y tiempos de desarrollo.",
     icon: Cpu,
     className: "md:col-span-2",
     color: "text-purple-400",
@@ -47,7 +47,7 @@ export default function BentoGrid() {
             Nuestra Propuesta de Valor
           </h2>
           <p className="text-lg text-muted max-w-2xl">
-            Combinamos tecnología de punta con un modelo de negocio transparente para entregarte el mejor resultado posible.
+            Combinamos tecnología de punta con un proceso rápido, optimizado y de alta calidad para crear tu website en tiempo récord.
           </p>
         </div>
 

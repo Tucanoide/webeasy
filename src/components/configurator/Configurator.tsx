@@ -2,7 +2,8 @@
 
 import { useConfigurator } from "@/context/ConfiguratorContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight, Plus } from "lucide-react";
+import { Check, ArrowRight, Plus, X } from "lucide-react";
+
 import { useState } from "react";
 import { clsx } from "clsx";
 import ContactModal from "./ContactModal";
@@ -21,6 +22,28 @@ export default function Configurator() {
   } = useConfigurator();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [detailsContent, setDetailsContent] = useState<string[]>([]);
+  const [detailsTitle, setDetailsTitle] = useState("");
+
+  const notIncluded = [
+    "Implementación Live del Website",
+    "Indexación Google",
+    "Producción de imágenes/videos originales",
+    "Hosting, costo de infraestructura y mantenimiento de website",
+    "Costo de dominio / Certificado SSL",
+    "Implementación Google Analytics",
+    "Servicios SEO",
+    "Costo plataformas, APIs, Plug-ins y servicios externos",
+    "Integraciones"
+  ];
+
+  const handleOpenDetails = (paquete: any) => {
+    setDetailsTitle(`Detalles: ${paquete.titulo}`);
+    setDetailsContent(paquete.items);
+    setIsDetailsOpen(true);
+  };
+
 
   return (
     <section id="configurador" className="py-24">
@@ -71,15 +94,18 @@ export default function Configurator() {
                         {item}
                       </li>
                     ))}
-                    <li className="flex items-center gap-2 font-medium text-brand-blue">
-                      <div className="w-1 h-1 bg-brand-blue rounded-full" />
-                      {paquete.interacciones} Interacciones
-                    </li>
                   </ul>
                 </div>
-                <button className="w-full btn-secondary text-xs uppercase tracking-wider py-2">
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleOpenDetails(paquete);
+                  }}
+                  className="w-full btn-secondary text-xs uppercase tracking-wider py-2"
+                >
                   Ver Detalles
                 </button>
+
               </motion.div>
             ))}
           </div>
@@ -140,8 +166,10 @@ export default function Configurator() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
+            data-testid="summary-bar"
             className="fixed bottom-6 left-0 right-0 z-[110] px-6 pointer-events-none"
           >
+
             <div className="container mx-auto">
               <div className="glass rounded-2xl p-4 md:p-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 pointer-events-auto border-brand-blue/20">
                 <div className="flex items-center gap-6">
@@ -178,6 +206,69 @@ export default function Configurator() {
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
       />
+
+      <AnimatePresence>
+        {isDetailsOpen && (
+          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsDetailsOpen(false)}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-lg bg-card border border-border rounded-2xl shadow-2xl p-6 md:p-8"
+            >
+              <button 
+                onClick={() => setIsDetailsOpen(false)}
+                className="absolute top-4 right-4 p-2 rounded-full hover:bg-accent transition-colors"
+              >
+                <X size={20} />
+              </button>
+              
+              <h3 className="text-2xl font-bold mb-6">{detailsTitle}</h3>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-brand-blue mb-4">Lo que Incluye</h4>
+                  <ul className="grid grid-cols-1 gap-2">
+                    {detailsContent.map((item, i) => (
+                      <li key={i} className="flex gap-2 text-sm">
+                        <Check size={16} className="text-brand-blue shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="pt-6 border-t border-border">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-red-400 mb-4">No Incluido</h4>
+                  <ul className="grid grid-cols-1 gap-2">
+                    {notIncluded.map((item, i) => (
+                      <li key={i} className="flex gap-2 text-sm text-muted">
+                        <X size={16} className="text-red-400/50 shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <button 
+                onClick={() => setIsDetailsOpen(false)}
+                className="w-full mt-8 btn-primary py-3"
+              >
+                Entendido
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
+

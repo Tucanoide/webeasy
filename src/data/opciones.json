@@ -5,32 +5,61 @@
       "titulo": "Landing Page",
       "paginas": 1,
       "precio": 1000,
-      "items": ["Página estática", "Form contacto"],
-      "interacciones": 3
+      "items": [
+        "1 Página",
+        "Diseño: Theme Template (5 opciones)",
+        "Imágenes / Videos (Stock Royalty Free)",
+        "Website Copy/Textos",
+        "Versión Responsive (Desktop/Mobile)",
+        "Formulario de Contacto",
+        "Optimización de Rendimiento",
+        "1 Ronda de Feedback"
+      ]
     },
     {
       "id": "home-1",
-      "titulo": "Home + 1 sección",
+      "titulo": "HOME + 1 Sección",
       "paginas": 2,
       "precio": 1500,
-      "items": ["Páginas estáticas", "Form contacto", "Menú superior"],
-      "interacciones": 3
+      "items": [
+        "Diseño: Theme Template (5 opciones)",
+        "Imágenes / Videos (Stock Royalty Free)",
+        "Website Copy/Textos",
+        "Versión Responsive (Desktop/Mobile)",
+        "Formulario de Contacto",
+        "Optimización de Rendimiento",
+        "1 Ronda de Feedback"
+      ]
     },
     {
       "id": "home-2",
-      "titulo": "Home + 2 secciones",
+      "titulo": "HOME + 2 Secciones",
       "paginas": 3,
       "precio": 2000,
-      "items": ["Páginas estáticas", "Form contacto", "Menú superior"],
-      "interacciones": 4
+      "items": [
+        "Diseño: Theme Template (5 opciones)",
+        "Imágenes / Videos (Stock Royalty Free)",
+        "Website Copy/Textos",
+        "Versión Responsive (Desktop/Mobile)",
+        "Formulario de Contacto",
+        "Optimización de Rendimiento",
+        "2 Ronda de Feedback"
+      ]
     },
     {
       "id": "home-3",
-      "titulo": "Home + 3 secciones",
+      "titulo": "HOME + 3 Secciones",
       "paginas": 4,
       "precio": 2500,
-      "items": ["Páginas estáticas", "Form contacto", "Menú superior"],
-      "interacciones": 4
+      "items": [
+        "Diseño: Theme Template (5 opciones)",
+        "Imágenes / Videos (Stock Royalty Free)",
+        "Website Copy/Textos",
+        "Versión Responsive (Desktop/Mobile)",
+        "Formulario de Contacto",
+        "Optimización de Rendimiento",
+        "2 Ronda de Feedback"
+      ]
     }
   ],
   "adicionales": [
@@ -69,3 +98,4 @@
     }
   ]
 }
+

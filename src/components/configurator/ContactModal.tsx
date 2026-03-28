@@ -15,16 +15,46 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulación de envío
-    setTimeout(() => {
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+      type: "project",
+      configuration: {
+        base: selectedBase?.titulo,
+        adicionales: selectedAdicionales.map(a => a.titulo),
+        totalOneTime,
+        totalAnual
+      }
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        setIsSuccess(true);
+      } else {
+        alert("Ocurrió un error. Por favor envíanos un mail directo a info@bedisruptive.io");
+
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error de conexión. Intentá escribiéndonos directamente.");
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 1500);
+    }
   };
+
 
   if (!isOpen && !isSuccess) return null;
 
@@ -115,6 +145,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <label className="block text-sm font-medium text-muted mb-1">Nombre Completo</label>
                       <input 
                         required 
+                        name="name"
                         type="text" 
                         className="w-full px-4 py-3 rounded-xl bg-accent/20 border border-border text-white focus:ring-2 focus:ring-brand-blue outline-none transition-all" 
                         placeholder="Juan Pérez" 
@@ -124,6 +155,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <label className="block text-sm font-medium text-muted mb-1">Email de Trabajo</label>
                       <input 
                         required 
+                        name="email"
                         type="email" 
                         className="w-full px-4 py-3 rounded-xl bg-accent/20 border border-border text-white focus:ring-2 focus:ring-brand-blue outline-none transition-all" 
                         placeholder="juan@empresa.com" 
@@ -132,10 +164,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     <div>
                       <label className="block text-sm font-medium text-muted mb-1">Mensaje (Opcional)</label>
                       <textarea 
+                        name="message"
                         className="w-full px-4 py-3 rounded-xl bg-accent/20 border border-border text-white focus:ring-2 focus:ring-brand-blue outline-none transition-all resize-none h-24" 
                         placeholder="Contanos brevemente sobre tu negocio..."
                       ></textarea>
                     </div>
+
                     
                     <button 
                       type="submit"

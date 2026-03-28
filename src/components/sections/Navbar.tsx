@@ -31,12 +31,22 @@ export default function Navbar() {
           </button>
         </div>
 
-        <button 
-          onClick={() => scrollTo("configurador")}
-          className="btn-primary text-sm py-2 px-4 whitespace-nowrap"
-        >
-          Empezar Proyecto
-        </button>
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={() => scrollTo("contacto")}
+            className="hidden sm:block text-sm font-semibold hover:text-brand-blue transition-colors px-4 py-2 border border-border/50 rounded-full hover:bg-white/5"
+          >
+            Contacto
+          </button>
+          
+          <button 
+            onClick={() => scrollTo("configurador")}
+            className="btn-primary text-sm py-2 px-5 whitespace-nowrap shadow-lg shadow-brand-blue/20"
+          >
+            Empezar Proyecto
+          </button>
+        </div>
+
       </div>
     </motion.nav>
   );

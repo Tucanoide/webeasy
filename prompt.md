@@ -113,10 +113,10 @@ JSON
   ],
   "adicionales": [
     { "id": "bot-ai", "titulo": "Bot Personalizado", "descripcion": "IA entrenada con tu data", "precio": 800, "popular": true },
-    { "id": "cms", "titulo": "CMS (Gestor de Contenidos)", "descripcion": "Panel autoadministrable", "precio": 1000 },
+    { "id": "cms", "titulo": "CMS (Gestor de Contenidos)", "descripcion": "Panel autoadministrable", "precio": 1200 },
     { "id": "micro-anim", "titulo": "2 Microanimaciones", "descripcion": "Mejora la UX", "precio": 500 },
     { "id": "home-anim", "titulo": "Animación Home", "descripcion": "Animación de alto impacto", "precio": 1000 },
-    { "id": "hosting", "titulo": "Hosting + Soporte", "descripcion": "Mantenimiento anual premium", "precio": 300, "recurrente": true, "periodo": "/año" }
+    { "id": "hosting", "titulo": "Hosting + Soporte", "descripcion": "Mantenimiento anual premium", "precio": 900, "recurrente": true, "periodo": "/año" }
   ]
 }
 Instrucción de Layout Elástico:

@@ -36,15 +36,6 @@ export default function Hero() {
       />
 
       <div className="container relative z-10 max-w-5xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/50 border border-border text-sm font-medium text-brand-blue mb-8"
-        >
-          <Sparkles className="w-4 h-4" />
-          <span>LANZAMIENTO EXPRESS 2026</span>
-        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -63,8 +54,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10"
         >
-          Sin presupuestos ocultos ni demoras infinitas. Elegí tu base, sumá tus
-          opcionales y lanzá tu proyecto hoy mismo.
+          Sin costos ocultos ni demoras infinitas. Configurá tu sitio, elegí tus funcionalidades
+          y ponelo online en tiempo récord.
         </motion.p>
 
         <motion.div

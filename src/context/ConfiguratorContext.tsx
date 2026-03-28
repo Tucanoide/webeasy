@@ -9,8 +9,8 @@ interface PaqueteBase {
   paginas: number;
   precio: number;
   items: string[];
-  interacciones: number;
 }
+
 
 interface Adicional {
   id: string;
